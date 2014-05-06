@@ -1,0 +1,43 @@
+
+// This is a Java Application
+apply plugin: 'java'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+
+// QiWeb repository and plugin
+buildscript {	
+	repositories {
+    	maven {
+    		url "https://repo.codeartisans.org/qiweb"
+    		credentials { username = "qiweb"; password = "qiweb" }
+		}
+	}
+	dependencies { classpath 'org.qiweb:org.qiweb.gradle:0.2.0.Alpha' }
+}
+repositories {
+    maven {
+    	url "https://repo.codeartisans.org/qiweb"
+    	credentials { username = "qiweb"; password = "qiweb" }
+	}
+}
+apply plugin: 'qiweb'
+
+
+// Application Dependencies
+dependencies {
+
+    compile "org.qiweb:org.qiweb.api:0.2.0.Alpha"
+    // Add application compile dependencies here
+
+    runtime "org.qiweb:org.qiweb.server.bootstrap:0.2.0.Alpha"
+    runtime 'ch.qos.logback:logback-classic:1.1.2'
+    // Add application runtime dependencies here
+
+    testCompile "org.qiweb:org.qiweb.test:0.2.0.Alpha"
+    // Add application test dependencies here
+
+}
+
+// Enhance your build here
