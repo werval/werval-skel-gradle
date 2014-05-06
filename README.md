@@ -15,4 +15,4 @@ Run tests
 	gradle check
 
 
-See http://www.gradle.org/documentation
+See http://www.gradle.org/documentation and http://www.gradle.org/tooling
