@@ -1,6 +1,3 @@
-target
+.gradle
 build
 .devshell.lock
-.gradle
-.nb-gradle
-
