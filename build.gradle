@@ -13,6 +13,7 @@ buildscript {
     		url "https://repo.codeartisans.org/qiweb"
     		credentials { username = "qiweb"; password = "qiweb" }
 		}
+        mavenCentral()
 	}
 	dependencies { classpath 'org.qiweb:org.qiweb.gradle:0.2.0.Alpha' }
 }
@@ -21,6 +22,7 @@ repositories {
     	url "https://repo.codeartisans.org/qiweb"
     	credentials { username = "qiweb"; password = "qiweb" }
 	}
+    mavenCentral()
 }
 apply plugin: 'qiweb'
 
