@@ -40,4 +40,6 @@ dependencies {
 
 }
 
-// Enhance your build here
+
+// See http://www.gradle.org/documentation for build insights
+// And http://www.gradle.org/tooling for IDE support
