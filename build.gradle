@@ -1,4 +1,6 @@
 
+description = "QiWeb Skeleton - Gradle Quickstart"
+
 // This is a Java Application
 apply plugin: 'java'
 sourceCompatibility = '1.8'
