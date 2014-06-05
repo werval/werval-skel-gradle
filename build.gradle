@@ -11,11 +11,13 @@ targetCompatibility = '1.8'
 // QiWeb repository and plugin
 buildscript {	
 	repositories {
+        maven { url qiwebLocalRepository }
     	maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
 	}
-	dependencies { classpath 'org.qiweb:org.qiweb.gradle:0.2.0.Alpha' }
+	dependencies { classpath 'org.qiweb:org.qiweb.gradle:0' }
 }
 repositories {
+    maven { url qiwebLocalRepository }
     maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
     // mavenCentral()
 }
@@ -25,14 +27,14 @@ apply plugin: 'qiweb'
 // Application Dependencies
 dependencies {
 
-    compile "org.qiweb:org.qiweb.api:0.2.0.Alpha"
+    compile "org.qiweb:org.qiweb.api:0"
     // Add application compile dependencies here
 
-    runtime "org.qiweb:org.qiweb.server.bootstrap:0.2.0.Alpha"
+    runtime "org.qiweb:org.qiweb.server.bootstrap:0"
     runtime 'ch.qos.logback:logback-classic:1.1.2'
     // Add application runtime dependencies here
 
-    testCompile "org.qiweb:org.qiweb.test:0.2.0.Alpha"
+    testCompile "org.qiweb:org.qiweb.test:0"
     // Add application test dependencies here
 
 }
