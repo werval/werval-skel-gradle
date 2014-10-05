@@ -1,5 +1,6 @@
 
 description = "QiWeb Skeleton - Gradle"
+def qiwebVersion = '0'
 
 // This is a Java Application
 apply plugin: 'java'
@@ -14,7 +15,7 @@ buildscript {
         maven { url qiwebLocalRepository }
     	maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
 	}
-	dependencies { classpath 'org.qiweb:org.qiweb.gradle:0' }
+	dependencies { classpath "org.qiweb:org.qiweb.gradle:$qiwebVersion" }
 }
 repositories {
     maven { url qiwebLocalRepository }
@@ -27,14 +28,14 @@ apply plugin: 'qiweb'
 // Application Dependencies
 dependencies {
 
-    compile "org.qiweb:org.qiweb.api:0"
+    compile "org.qiweb:org.qiweb.api:$qiwebVersion"
     // Add application compile dependencies here
 
-    runtime "org.qiweb:org.qiweb.server.bootstrap:0"
+    runtime "org.qiweb:org.qiweb.server.bootstrap:$qiwebVersion"
     runtime 'ch.qos.logback:logback-classic:1.1.2'
     // Add application runtime dependencies here
 
-    testCompile "org.qiweb:org.qiweb.test:0"
+    testCompile "org.qiweb:org.qiweb.test:$qiwebVersion"
     // Add application test dependencies here
 
 }
