@@ -1,6 +1,5 @@
 
 description = "QiWeb Skeleton - Gradle"
-def qiwebVersion = '0'
 
 // This is a Java Application
 apply plugin: 'java'
