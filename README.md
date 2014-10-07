@@ -1,7 +1,7 @@
 # myNewProject
 
 This QiWeb application was generated from
-`git@scm.codeartisans.org/qiweb/qiweb-skel-gradle` tag `0.2`
+`git@scm.codeartisans.org/qiweb/qiweb-skel-gradle` tag `0.3.0-beta`
 
 To run in development mode: `./gradlew devshell`
 
