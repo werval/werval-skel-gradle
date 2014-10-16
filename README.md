@@ -1,7 +1,4 @@
-# myNewProject
-
-This QiWeb application was generated from
-`git@scm.codeartisans.org/qiweb/qiweb-skel-gradle`.
+# QiWeb Application Gradle Skeleton
 
 To run in development mode: `./gradlew devshell`
 
