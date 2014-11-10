@@ -11,7 +11,7 @@ targetCompatibility = '1.8'
 
 // Dependencies Repositories
 repositories {
-    maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } }
+    maven { url "https://repo.codeartisans.org/qiweb" }
     // jcenter()
     // mavenCentral()
 }
@@ -35,7 +35,7 @@ dependencies {
 
 // QiWeb plugin
 buildscript {	
-	repositories { maven { url "https://repo.codeartisans.org/qiweb"; credentials { username = "qiweb"; password = "qiweb" } } }
+	repositories { maven { url "https://repo.codeartisans.org/qiweb" } }
 	dependencies { classpath "org.qiweb:org.qiweb.gradle:$qiwebVersion" }
 }
 apply plugin: 'qiweb'
