@@ -1,45 +1,30 @@
 
-description = "QiWeb Application Gradle Skeleton"
-
-
-// This is a Java 8 Application
-apply plugin: 'java'
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-
-
-// Dependencies Repositories
+buildscript {   
+    repositories { 
+        maven { url qiwebLocalRepository }
+        maven { url "https://repo.codeartisans.org/qiweb" }
+        // mavenCentral()
+        // jcenter()
+    }
+    dependencies { classpath "org.qiweb:org.qiweb.gradle:$qiwebVersion" }
+}
 repositories {
-    maven { url "https://repo.codeartisans.org/qiweb" }
-    // jcenter()
+    jcenter()
     // mavenCentral()
 }
 
+apply plugin: 'qiweb-application'
 
-// Application Dependencies
 dependencies {
-
-    compile "org.qiweb:org.qiweb.api:$qiwebVersion"
+    compile qiweb.module( 'json' )
     // Add application compile dependencies here
 
-    runtime "org.qiweb:org.qiweb.server.bootstrap:$qiwebVersion"
     runtime 'ch.qos.logback:logback-classic:1.1.2'
     // Add application runtime dependencies here
 
-    testCompile "org.qiweb:org.qiweb.test:$qiwebVersion"
+    testCompile 'com.jayway.restassured:rest-assured:2.3.4'
     // Add application test dependencies here
-
 }
-
-
-// QiWeb plugin
-buildscript {	
-	repositories { maven { url "https://repo.codeartisans.org/qiweb" } }
-	dependencies { classpath "org.qiweb:org.qiweb.gradle:$qiwebVersion" }
-}
-apply plugin: 'qiweb'
-
 
 // See http://www.gradle.org/documentation for build insights
 // And http://www.gradle.org/tooling for IDE support
