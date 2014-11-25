@@ -1,4 +1,4 @@
-# QiWeb Application Gradle Skeleton
+# QiWeb Application - Gradle Skeleton
 
 To run in development mode: `gradle devshell`
 
