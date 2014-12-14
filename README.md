@@ -1,4 +1,4 @@
-# QiWeb Application - Gradle Skeleton
+# Werval Application - Gradle Skeleton
 
 To run in development mode: `gradle devshell`
 
@@ -10,5 +10,5 @@ To build a production distribution: `gradle distZip`
 
 To see all available tasks: `gradle tasks`
 
-The QiWeb documentation is available at http://localhost:23023/@doc in
+The Werval documentation is available at http://localhost:23023/@doc in
 development mode.

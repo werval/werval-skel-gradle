@@ -1,15 +1,15 @@
 package controllers;
 
-import org.qiweb.api.outcomes.Outcome;
-import static org.qiweb.api.context.CurrentContext.*;
-import static org.qiweb.modules.json.JSON.*;
+import io.werval.api.outcomes.Outcome;
+import static io.werval.api.context.CurrentContext.*;
+import static io.werval.modules.json.JSON.*;
 
 public class Application
 {
     public Outcome index()
     {
         // Welcome Page
-        return new org.qiweb.controllers.Welcome().welcome();
+        return new io.werval.controllers.Welcome().welcome();
 
         // It works!
         // return outcomes().ok( "It works!" ).build();
