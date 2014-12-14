@@ -1,7 +1,7 @@
 
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.qiweb.test.QiWebHttpRule;
+import io.werval.test.WervalHttpRule;
 
 import static com.jayway.restassured.RestAssured.expect;
 import static org.hamcrest.Matchers.equalTo;
@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class HttpTest
 {
     @ClassRule
-    public static final QiWebHttpRule QIWEB = new QiWebHttpRule();
+    public static final WervalHttpRule WERVAL = new WervalHttpRule();
 
     @Test
     public void assertJsonMessageItWorks()
