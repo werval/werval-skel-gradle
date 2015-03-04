@@ -3,7 +3,7 @@ import org.junit.ClassRule;
 import org.junit.Test;
 import io.werval.test.WervalHttpRule;
 
-import static com.jayway.restassured.RestAssured.expect;
+import static com.jayway.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
 
 public class HttpTest
@@ -14,10 +14,8 @@ public class HttpTest
     @Test
     public void assertJsonMessageItWorks()
     {
-        expect()
-            .statusCode( 200 )
-            .body( "message", equalTo( "It works!" ) )
-            .when()
-            .get( "/" );
+        when().get( "/" )
+            .then().statusCode( 200 )
+            .and().body( "message", equalTo( "It works!" ) );
     }
 }
